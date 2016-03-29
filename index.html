@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div  id="footer-fix">
+		<header>
+			<a href="index.html">Hangman</a>
+		</header>
+		<div id="choosePlayers" class="container">
+			<div class="selector">
+				<img src="img/multi.svg">
+				<a id="multiPlayer" href="#">Two Players</a>
+				<p>Challenge/get challenge by a friend.</p>
+			</div>
+			<div class="selector">
+				<img src="img/single.svg">
+				<a id="singlePlayer" href="#">One Player</a>
+				<p>Play against the computer.</p>
+			</div>
+		</div>
+		<div id="startForm" class="invisible">
+			<form id="form">
+				<input class="playerName" id="player1" type="text" placeholder="Player1" required></input>
+				<input class="playerName" id="player2" type="text" placeholder="Player2" required></input>
+				<input id="secretWord" type="password" placeholder="Secret Word" required></input>
+			</form>
+			<div id="startButtons">
+				<input id="submit" type="submit" value="Start"></input>
+				<input id="loadFromStart" type="submit" value="Load Game"></input>
+			</div>
+		</div>
+		<div id="startFormSingle" class="invisible">
+			<form id="form">
+				<input class="playerName" id="playerS" type="text" placeholder="Player Name" required></input>
+			</form>
+			<div id="startButtonsS">
+				<input id="submitS" type="submit" value="Start"></input>
+				<input id="loadFromStartS" type="submit" value="Load Game"></input>
+			</div>
+		</div>
+		<div id="container" class="container invisible">
+			<div class="row">
+				<div id="drawing" class="box1">
+					<div id="hang-pic">
+						<img id="hang" class="invisible" src="img/hang.png">
+						<img id="hang1" class="invisible" src="img/hang1.png">
+						<img id="hang2" class="invisible" src="img/hang2.png">
+						<img id="hang3" class="invisible" src="img/hang3.png">
+						<img id="hang4" class="invisible" src="img/hang4.png">
+						<img id="hang5" class="invisible" src="img/hang5.png">
+						<img id="hang6" class="invisible" src="img/hang6.png">
+					</div>
+				</div>
+				<div id="wordBox" class="box2">
+					<div id="wordWrapper">
+						<ul id="word">
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div id="action" class="box3">
+					<div id="keyboard" class="invisible">
+						<div class="row">
+							<div class="key disabled" id="Q">Q</div><div class="key disabled" id="W">W</div><div class="key disabled" id="E">E</div><div class="key disabled" id="R">R</div><div class="key disabled" id="T">T</div><div class="key disabled" id="Y">Y</div><div class="key disabled" id="U">U</div><div class="key disabled" id="I">I</div><div class="key disabled" id="O">O</div><div class="key disabled" id="P">P</div>
+						</div>
+						<div class="row">
+							<div class="key disabled" id="A">A</div><div class="key disabled" id="S">S</div><div class="key disabled" id="D">D</div><div class="key disabled" id="F">F</div><div class="key disabled" id="G">G</div><div class="key disabled" id="H">H</div><div class="key disabled" id="J">J</div><div class="key disabled" id="K">K</div><div class="key disabled" id="L">L</div>
+						</div>
+						<div class="row">
+							<div class="key disabled" id="Z">Z</div><div class="key disabled" id="X">X</div><div class="key disabled" id="C">C</div><div class="key disabled" id="V">V</div><div class="key disabled" id="B">B</div><div class="key disabled" id="N">N</div><div class="key disabled" id="M">M</div>
+						</div>
+					</div>
+				</div>
+				<div id="score" class="box4">
+					<p id="scoreText"></p>
+					<a href="index.html" id="startAgain" class="invisible">Start again</a>
+					<a id="save" href="#">Save game</a>
+					<a id="load" href="#">Load game</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footerfix" class="row"></div>
+	<footer id="footer">
+		<p>&copy Urtzi Pascual 2016 | Hangman</p>
+	</footer>
+	<script type="text/javascript" src="new_hangman.js"></script>
+</body>
+</html>
